@@ -1,0 +1,71 @@
+curl -X POST -H 'Content-Type: application/json' \
+http://localhost:8983/solr/feedback/schema -d '{
+  "add-field": [
+    {
+      "name": "leading_paragraph",
+      "type": "text_general",
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "page_title",
+      "type": "string",
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "search_query",
+      "type": "string",
+      "stored": true,
+      "indexed": true
+    },
+    {
+      "name": "total_active_time",
+      "type": "pint",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "total_copy",
+      "type": "pint",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "url",
+      "type": "string",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "userID",
+      "type": "string",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "page_saved",
+      "type": "boolean",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "bookmarked",
+      "type": "boolean",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "printed_document",
+      "type": "boolean",
+      "stored": true,
+      "indexed": false
+    },
+    {
+      "name": "cohort",
+      "type": "string",
+      "stored": true,
+      "indexed": false
+    }
+  ]
+}'

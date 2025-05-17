@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "Implicit Feedback Capture",
+  "version": "1.0",
+  "description": "Captures implicit feedback on web pages.",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "bookmarks",
+    "tabs",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": [
+        "js/jquery.min.js",
+        "js/content.js",
+        "js/mouseDistance.js"
+      ],
+      "run_at": "document_end"
+    }
+  ],
+  "icons": {
+    "48": "icon/48.png"
+  },
+  "action": {
+    "default_popup": 
+        "popup.html",
+    "default_icon": {
+      "512": "icon/512.png",
+      "192": "icon/192.png",
+      "144": "icon/144.png",
+      "96": "icon/96.png",
+      "72": "icon/72.png",
+      "48": "icon/48.png"
+    }
+  }
+}

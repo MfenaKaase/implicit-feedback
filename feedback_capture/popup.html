@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' https://cdn.jsdelivr.net;">
+  </head>
+  <script src="./js/popup.js"></script>
+  <title>Implicit Feedback Capture</title>
+  <style>
+    body {
+      height: 500px;
+      width: 500px;
+    }
+
+    body > div {
+      width: 80%;
+      margin: auto;
+    }
+
+    /* button {
+        background-color: rgba(128, 255, 0, 0.699);
+        cursor: pointer;
+    } */
+
+    .cohort-bar {
+      /* display: none; */
+      background-color: #f0f0f081;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+
+    button#save-cohort {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .spinner-border {
+    display: none;
+    }
+
+    .submit-btn.loading .spinner-border {
+        display: inline-block;
+    }
+
+    .submit-btn-2.loading .spinner-border {
+        display: inline-block;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="text-center container">
+    <img src="./icon/48.png" alt="my capture" >
+
+    <div class="row">
+      <div class="col-xl-8">
+
+        <div class="card">
+          <div class="card-body pt-3">
+            <!-- Bordered Tabs -->
+            <ul class="nav nav-tabs nav-tabs-bordered" role="tablist">
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview" aria-selected="true" role="tab">Results</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit" aria-selected="false" role="tab" tabindex="-1">Create Account</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings" aria-selected="false" role="tab" tabindex="-1">Login</button>
+              </li>
+
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="tab" data-bs-target="#download-options" aria-selected="false" role="tab" tabindex="-1">Data</button>
+              </li>
+
+              <button id="logoutButton" class="btn btn-danger btn-sm mx-2">Logout</button>
+            </ul>
+            <div class="tab-content pt-2">
+
+              <div class="tab-pane fade profile-overview active show" id="profile-overview" role="tabpanel">
+                <h2 class="card-title">Results</h2>
+            
+                <div id="feedbackResultsContainer" class="shadow-lg">
+                  Nothing To See Here!
+                </div>
+
+              </div>
+
+              <div class="tab-pane fade profile-edit pt-3" id="profile-edit" role="tabpanel">
+
+                <h2>Create Account</h2>
+                <form id="signup-form" class="shadow-lg rounded text-start cohort-bar">
+                 <div >
+                  <div class="mb-2">
+                    <label for="cohort-input">Full Name</label>
+                    <input type="text" id="cohort-input" placeholder="Enter Full Name" name="cohort-input" class="form-control">
+                  </div>
+                  <div class="mb-2">
+                    <label for="cohort-input">Email</label>
+                    <input type="text" id="cohort-input" placeholder="Enter Email" name="cohort-input" class="form-control">
+                  </div>
+                  <div class="mb-2">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" class="form-control">
+                  </div>
+                  <div class="mb-2">
+                    <label for="password_confirmation">Password</label>
+                    <input type="password" id="password_confirmation" placeholder="Enter your password" class="form-control">
+                  </div>
+                  
+                  <button id="save-cohort" class="btn btn-dark w-100 text-center submit-btn-2">Sign Up 
+                    <span class="spinner-border spinner-border-sm text-light" role="status" aria-hidden="true"></span>
+                    </button>
+                 </div>
+                 <p id="message"></p>
+                </form>
+
+              </div>
+
+              <div class="tab-pane fade pt-3" id="profile-settings" role="tabpanel">
+
+                <h2>Login</h2>
+                <form id="login-form" class="shadow-lg rounded text-start cohort-bar" method="post">
+                 <div >
+                  <div class="mb-2">
+                    <label for="login-email">Email</label>
+                    <input type="text" id="login-email" placeholder="Enter Email" name="login-email" class="form-control">
+                  </div>
+                  <div class="mb-2">
+                    <label for="login-password">Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" class="form-control">
+                  </div>
+  
+                  <button id="save-cohort" type="submit" class="btn btn-dark w-100 text-center submit-btn">Login 
+                    <span class="spinner-border spinner-border-sm text-light" role="status" aria-hidden="true"></span>
+                    </button>
+                 </div>
+                 <p id="message"></p>
+                </form>
+
+              </div>
+
+              <div class="tab-content pt-2">
+
+                <div class="tab-pane fade download-options active show" id="download-options" role="tabpanel">
+                  <button id="downloadButton" class="btn btn-sm btn-outline-dark mx-2">Download Data</button>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- End Bordered Tabs -->
+
+          </div>
+        </div>
+        <p class="message"></p>
+      </div>
+    </div>
+   
+  </div>
+
+<script src="">
+
+document.addEventListener('DOMContentLoaded', function() {
+    chrome.runtime.sendMessage({ popupOpened: true });
+});
+
+</script>
+</body>
+</html>

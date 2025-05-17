@@ -1,0 +1,60 @@
+
+Data saved successfully
+Data saved successfully
+Data saved successfully
+Close Time Stamp 2024-05-10 15:49:35 
+ Open Time Stamp: 2024-05-10 15:49:29 
+Data saved successfully
+ {
+  "responseHeader":{
+    "status":0,
+    "QTime":4477
+  }
+} 
+Close Time Stamp 2024-05-10 15:50:21 
+ Open Time Stamp: 2024-05-10 15:50:12 
+Data saved successfully
+ {
+  "responseHeader":{
+    "status":0,
+    "QTime":1496
+  }
+} 
+Close Time Stamp 2024-05-10 15:51:21 
+ Open Time Stamp: 2024-05-10 15:51:02 
+Data saved successfully
+ {
+  "responseHeader":{
+    "status":0,
+    "QTime":8236
+  }
+} 
+Data saved successfully
+Data saved successfully
+Close Time Stamp 2024-05-11 18:41:45 
+ Open Time Stamp: 2024-05-11 18:41:43 
+Data saved successfully
+  
+Close Time Stamp 2024-05-11 18:42:40 
+ Open Time Stamp: 2024-05-11 18:42:21 
+Data saved successfully
+  
+Close Time Stamp 2024-05-11 18:48:57 
+ Open Time Stamp: 2024-05-11 18:43:13 
+Data saved successfully
+  
+Close Time Stamp 2024-05-11 18:49:01 
+ Open Time Stamp: 2024-05-11 18:43:13 
+Data saved successfully
+  
+Close Time Stamp 2024-05-11 18:57:03 
+ Open Time Stamp: 2024-05-11 18:56:33 
+Data saved successfully
+ {
+  "responseHeader":{
+    "status":0,
+    "QTime":3482
+  }
+} 
+Close Time Stamp 2024-05-15 12:56:57 
+ Open Time Stamp: 2024-05-15 12:49:06 
